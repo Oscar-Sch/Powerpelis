@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    font-family: 'Mouse Memoirs', sans-serif;
+    letter-spacing: .13em;
+    font-size: 1.2rem;
+    display: flex;
+    width: 100%;
+    /* background-color: orange; */
+    position: fixed;
+    top: 0;
+    justify-content: left;
+    
+    /* height: 50px; */
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(115,11,11,1) 30%, rgba(229,68,55,1) 100%);
+   
+    border-top: 3px solid black;
+    border-bottom: 5px solid black;
+    height: 3em;   
+    z-index: 50;
+    /* overflow: hidden; */
+}
+header::after{
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 8px;
+    background-color: white;
+    bottom: -3px;
+    /* border: 3px solid black;
+    border-width: 3px 0px 0px 0px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    left:-50px;
+    z-index: 0; */
+    z-index: -1;
+}
+
+.deco-header1{
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,121,43,1) 30%, rgba(106,229,55,1) 100%);
+    right: 34%;
+    bottom: 1px;
+    transform: skew(-25deg);
+    z-index: -5;
+}
+.deco-header2{
+    position: absolute;
+    width: 43%;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(28,69,135,1) 39%, rgba(42,116,223,1) 100%);
+    bottom: 1px;
+    right: -9%;
+    transform: skew(-25deg);
+    z-index: -5;
+}
+.Logo{
+    
+    position: absolute;
+    width: 150px;
+
+    /* height: 100px; */
+    
+    /* padding-right:50px ; */
+    z-index: 10;
+    /* transform: rotate(-5deg); */
+    /* right: -15px; */
+    top: -10px;
+    left: 10px;
+    
+    
+
+}
+.SvgLogo-container{
+    position: relative;
+    width: 200px;
+    filter: drop-shadow(3px 3px 3px black);
+    transition: transform .3s, filter .3s;
+    z-index: 10;
+}
+.SvgLogo-container:hover{
+    transform: rotate(-7deg) scale(1.2);
+    filter: drop-shadow(4px 4px 6px black);
+    border: none;
+}
+/* .logo{
+    max-width: 300px;
+    margin:auto;
+    margin-top: 100px;
+    
+   
+    object-fit: contain;
+    
+}
+.logo-container{
+    width: 100%;
+    height: 100%;
+    color: red;
+    background-color: yellow;
+    background-image: url("../assets/PowerPelis-Trim.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+} */
+.nav-container{
+    width: 100%;
+    
+}
+.nav-container::after{
+    position: absolute;
+    bottom: -20px;
+    right: 66%;
+    content: "";
+    height: 100px;
+    width: 20px;
+    background-color: white;
+    border: 3px solid black;
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: skew(-25deg);
+    clip-path: polygon(0 27%, 100% 27%, 100% 82%, 0 82%);
+    z-index: -1;
+
+    
+}
+.nav-container::before{
+    position: absolute;
+    bottom: -20px;
+    right: 33%;
+    content: "";
+    height: 100px;
+    width: 20px;
+    background-color: white;
+    border: 3px solid black;
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: skew(-25deg);
+    clip-path: polygon(0 27%, 100% 27%, 100% 82%, 0 82%);
+    z-index: -1;
+
+    
+}
+nav{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    
+
+    
+}
+ul{
+    display: flex;
+    list-style: none;
+    
+    /* padding: .5em; */
+    /* margin-top: .5em; */
+}
+.first-list{
+    /* margin-left: 10em; */
+}
+.navbar-list{
+    padding: .5em .5em;
+    background-color: white;
+    clip-path: polygon(8% 0, 97% 0, 100% 100%, 0 99%);
+    border-radius: 10px 5px 0 0 ;
+    margin-top: .55em;
+    
+    z-index: 20;
+    border-bottom: 1px solid black;
+    margin-left: .5em;
+
+}
+/* .li1::after{
+    content: "home";
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    z-index: 80;
+} */
+
+a{
+    margin-left: .2em;
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    transition: letter-spacing .3s cubic-bezier(.08,1.51,1,1.14),
+    border .3s, font-weight .1s ease-in;
+}
+a:hover{
+    letter-spacing: .3em;
+    border-bottom: 2px dashed black;
+    font-weight: bolder;
+}

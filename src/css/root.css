@@ -1,0 +1,31 @@
+#root{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    
+    /* gap: 4em; */
+    /* margin-top: 200px; */
+    
+}
+body{
+    background-image: url(../assets/PowerPelis-BG-Blur.png);
+    background-size: cover;
+    width: 100%;
+    min-height: calc(100vh + 100px);
+    background-position: 0px -280px;
+    background-color: white;
+
+    
+    
+    
+}
+body::before{
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #0007;
+    z-index: -1;
+    
+}

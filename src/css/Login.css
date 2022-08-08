@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+@import url(https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap);
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#root{
+    width: 100%;
+
+}
+/* body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-border{
+    border: 5px solid black;
+    padding: 1em;
+    transform: rotate(-2deg);
+    background-color: white;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 200px;
+    
+}
+
+.container{
+    background: rgb(147,201,242);
+    background: radial-gradient(circle, rgba(147,201,242,1) 1%, rgba(107,182,238,1) 36%, rgba(59,153,224,1) 69%); 
+    border: 3px solid black;
+    border-radius: .5rem;
+    width: 400px;
+}
+.border{
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+}
+.title{
+    font-size: 2rem;
+    font-family: 'Bangers', cursive;
+    letter-spacing: .1em;
+    margin: 0 auto;
+    transform: rotate(2deg);
+    padding-top: .3em;
+    border-bottom: 2px dashed black;
+    width: fit-content;
+}
+.form{
+    padding: 1rem 1em;
+    transform: rotate(2deg);
+    font-family: 'Bangers', cursive;
+    letter-spacing: .1em;
+}
+.label{
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 1.5em;
+    padding: .5rem .5rem;
+    background-color: white;
+    border: 2px solid black;
+    border-bottom: none;
+    position: relative;
+    box-shadow:3px 3px 0 #222;
+
+}
+.label+.label{
+    border-bottom: 2px solid black;
+    border-top: none;
+    
+}
+.label:nth-child(2)::before{
+    content: "";
+    width: 20px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    bottom: -30px;
+    clip-path: polygon(18% 0, 0% 100%, 100% 0);
+    z-index: 3;
+
+}
+.label:nth-child(2)::after{
+    content: "";
+    width: 20px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    bottom: -35px;
+    clip-path: polygon(18% 0, 0% 100%, 100% 0);
+    z-index: 1;
+    transform: scale(1.3);
+    
+}
+.button{
+    font-family: 'Bangers', cursive;
+    letter-spacing: .1em;
+    width: 45%;
+    align-self: center;
+    background-color: #eee;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-style: italic;
+    position: relative;
+    border: 2px solid black;
+    padding: .3em 0em;
+    margin: .5em 0;
+    box-shadow:3px 3px 0 #222;
+    transition: box-shadow .3s,border .3s,background-color .3s, color .3s, transform .6s, font-size .3s,text-shadow .3s;
+
+}
+.button>span{
+    transition: font-size .3s,
+    padding .1s;
+}
+.button:hover{
+    box-shadow:6px 6px 6px #222;
+    transform: rotate(-2deg);
+    font-size: 1.6rem;
+}
+.button:active{
+    box-shadow:.5px .5px 0 #222;
+    border-bottom: 2px solid #eee;
+    border-right: 2px solid #eee;
+    background-color: rgb(213, 48, 48);
+    color: gold;
+    transform: rotate(-3deg);
+    border-width: 3px;
+    font-size: 1.3rem;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+    1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+
+}
+.button:active>span{
+    font-size: 1.3em;
+    padding-left: .2em;
+}
+
+.input{
+    border: 2px solid black;
+    padding: .2em .1em;
+    box-shadow:3px 3px 0 #222;
+}
+.input::placeholder{
+    color: #aaa;
+    font-weight: bold;
+}
+.input:focus{
+    outline-color: black;
+}

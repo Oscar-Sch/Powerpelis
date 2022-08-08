@@ -1,0 +1,26 @@
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    position: static;
+    margin-top: 100px;
+    z-index: 1;
+    border-top: 3px solid black;
+    
+}
+.footer-container{
+    display: flex;
+    margin-top: .7em;
+    border-top: 3px solid black;
+    justify-content: space-between;
+    padding: 0 .7em;
+    
+}
+.footer-first-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.ft-bk{
+    border: 3px solid black;
+}
