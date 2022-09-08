@@ -1,4 +1,5 @@
 #root{
+    max-width: 100vw;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,22 +11,25 @@
 }
 body{
     background-image: url(../assets/PowerPelis-BG-Blur.png);
-    background-size: cover;
+    background-size: 100vw;
+    
+    /* background-repeat: repeat; */
     width: 100%;
     min-height: calc(100vh + 100px);
     background-position: 0px -280px;
     background-color: white;
-
-    
-    
-    
 }
 body::before{
     content: "";
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-color: #0007;
-    z-index: -1;
-    
+    background-color: #0009;
+    z-index: -1;    
+}
+.hidden{
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
 }

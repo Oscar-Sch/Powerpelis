@@ -2,6 +2,8 @@ import {NavLink} from "react-router-dom";
 import "../css/Header.css"
 // import SvgLogo from "../assets/SvgLogo";
 import SvgLogo from '../assets/Logo.png'
+import Logo from "./Logo";
+
 
 function Header(){
     return(
@@ -14,7 +16,8 @@ function Header(){
             </div> */}
             <NavLink to={"/"} className="SvgLogo-container">
                 {/* <SvgLogo /> */}
-                <img className="Logo" src={SvgLogo}/>
+                {/* <img className="Logo" src={SvgLogo}/> */}
+                <Logo className="Logo"/>
             </NavLink>
             <div className="nav-container">
                 <nav>

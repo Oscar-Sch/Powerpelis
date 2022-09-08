@@ -85,12 +85,14 @@ header::after{
     position: relative;
     width: 200px;
     filter: drop-shadow(3px 3px 3px black);
-    transition: transform .3s, filter .3s;
+    transform: rotate(-5deg);
+    transition: transform .15s, filter .3s;
     z-index: 10;
+    
 }
 .SvgLogo-container:hover{
-    transform: rotate(-7deg) scale(1.2);
-    filter: drop-shadow(4px 4px 6px black);
+    transform: scale(1.05);
+    /* filter: drop-shadow(4px 4px 4px black); */
     border: none;
 }
 /* .logo{

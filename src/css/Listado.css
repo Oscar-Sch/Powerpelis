@@ -1,15 +1,91 @@
-.movie-slider{
-    /* z-index: 30; */
-    width: 90%;
-    /* height: 300px; */
-    background-color: aliceblue;
-    align-self: center;
-    margin-top: 100px;
+.list-container{
     display: flex;
-    /* gap: 1em; */
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+    margin-bottom: 100px;
+}
+
+.movie-article-container{
+    align-self: center;
+    padding-top: 6em;
+}
+.movie-article{
+    /* z-index: 30; */
+    /* width: 90%; */
+    max-width: 1000px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 60%, rgba(203,203,203,1) 100%);
+    /* align-self: center; */
+    margin: 0 4em;
+    /* margin-top: 100px; */
+    border: 3px solid black inset;
+    /* border-bottom: none; */
+    max-height: 200px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 5px 5px 5px black
+    , 0 0 0 3px black inset;
+    transition: all 1s ease-out;
+    
+}
+
+
+.movie-article-hov:hover{
+    max-height: 250px;
+}
+.movie-article-hov:hover>.movie-article-scroll-effect{
+    height: 25px;
+    transition: all 1s linear;
+}
+.movie-article-hov:hover>.movie-article-scroll-effect-shadow{
+    height: 170px;
+    transition: all 1s linear;
+}
+
+.movie-article-scroll-effect{
+    width: 100%;
+    height: 30px;
+    background: rgb(112,112,112);
+    background: linear-gradient(0deg, rgba(112,112,112,1) 0%, rgba(219,219,219,1) 55%, rgba(255,255,255,1) 70%, rgba(219,219,219,1) 85%, rgba(178,178,178,1) 100%);
+    position: absolute;
+    bottom: 0;
+    z-index: 35;
+    transition: all 1s cubic-bezier(1,-0.13,.5,1.11);
+    border-top: 2px solid #444;
+}
+.movie-article-scroll-effect-shadow{
+    content: "";
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background: rgb(108,108,108);
+    background: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(232,232,232,0) 50%);
+    z-index: 34;
+    bottom: 0;
+    transition: all 1s cubic-bezier(.75,-0.11,.03,1.15);
+}
+
+.movie-showcase{
+    display: flex;
     justify-content: space-between;
     padding: 1em;
     flex-wrap: wrap;
+    gap: 1em 0em;
+}
+.movie-article-title{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Bangers', cursive;
+    letter-spacing: .1em;
+    margin: 0 auto;
+    margin-top: .5em;
+    padding: .1em .2em;
+    /* border-bottom: 2px dashed black; */
+    border: 2px solid black;
+    width: fit-content;
+    box-shadow: 3px 3px 0 #444;
+    text-decoration: underline;
 }
 .movie-container{
     width: 31%;
@@ -19,31 +95,42 @@
     max-height:100%;
     display: flex;
     flex-direction: column;
-    transition:visibility 0s, opacity 1s;
-    
-    
+    transition:opacity 1s,box-shadow .8s;
+    border: 3px solid black;
+    background-color: black;
+}
+.movie-container::after{
+    content: "";
+    width: 100%;
+    height: 30%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(199,199,199,0) 50%);
+    position: absolute;
+    bottom: 0;
+    z-index: 30;
+    /* visibility: hidden; */
+    opacity: 0;
+    transition:opacity .5s;
 }
 .movie-img{
-    /* max-width: 100%; */
-    max-height: 100%;
     object-fit: cover;
-    /* position: absolute; */
-    /* width: 1px; */
+    height: 100%;
     
 }
 .movie-title-container{
     position: absolute;
     color: aliceblue;
     width: 100%;
-    /* display: none; */
-    visibility: hidden;
     opacity: 0;
     padding: 0 .5em;
-    /* transition: all 1s; */
-    transition:visibility 0s, opacity .5s;
+    background-color: #4448;
+    transition:opacity .8s;
 }
 .movie-title{
     text-align: center;
+    font-family: 'Bangers', cursive;
+    letter-spacing: .125em;
+    font-size: 2vw;       /*arreglar por encima de los 1500px*/
     
 }
 .movie-overview-container{
@@ -51,18 +138,29 @@
     color: aliceblue;
     bottom: 0;
     text-align: justify;
-    padding: 0 .5em;
-    /* display: none; */
-    visibility: hidden;
+    padding: .5em .5em;
     opacity: 0;
     transition:visibility 0s, opacity .5s;
-
-    /* transition: all 1s; */
+    background-color: #0008;
+    height: 30%;
+    overflow: hidden;
+    
 }
 
 .movie-container:hover :is(.movie-title-container, .movie-overview-container){
-    /* display: block; */
     visibility: visible;
     opacity: 1;
+    
+}
+.movie-container:hover::after{
+    visibility: visible;
+    opacity: 1;
+}
+.movie-container:hover{
+    box-shadow: 5px 5px 10px #444;
+}
 
+.full-length{
+    max-height: 1500px;
+    transition: all 1.5s ease;
 }
